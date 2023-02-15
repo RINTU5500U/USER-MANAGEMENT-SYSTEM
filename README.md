@@ -25,7 +25,7 @@ I hope you are doing well
 
 I saw your company is hiring software developer interns  at internshala.com . So i am interested for this job role .I am writing to apply (Backend developer) in your company.The position is matching to my interest areas and career goals. I would like to bring your attention to my key strengths of the job role.
 
->>Interested for Nodejs developer.
+>>Interested for Backend developer.
 >>I have strong technology knowledge about [ html,css, javascript, node.js, express, RESTful api, React.js, mongoDB, AWS, Redis, OOPS ]
 >>I have done 9 robust backend projects like using express and mongoDB and also 2 frontend projects.
 
