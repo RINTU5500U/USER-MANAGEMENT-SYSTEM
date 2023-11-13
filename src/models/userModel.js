@@ -1,20 +1,17 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    title: {
-        type: String,
-        required: true,
-        enum: ["Mr", "Mrs", "Miss"],
-        trim: true
+    id: {
+        type: Number
     },
-    name: {
+    first_name: {
         type: String,
         required: true,
         trim: true
     },
-    phone: {
+    last_name: {
         type: String,
-        unique: true,
+        required: true,
         trim: true
     },
     email: {
@@ -24,24 +21,24 @@ const userSchema = new mongoose.Schema({
         lowercase : true,
         trim: true
     },
-    password: {
+    gender: {
         type: String,
-        required: true,
-        trim: true
+        // enum: ["Male", "Female", "Polygender", "Non-binary", "Agender"],
     },
-    isDeleted: {
+    avatar: {
+        type: String
+    },
+    domain: {
+        type: String,
+    },
+    available: {
         type: Boolean,
-        default: false
     },
     createdAt: { 
         type: String,
         default: new Date().toLocaleString()
     },
     updatedAt: {
-        type: String,
-        default: null
-    },
-    deletedAt: {
         type: String,
         default: null
     }

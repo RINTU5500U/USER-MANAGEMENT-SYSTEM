@@ -1,3 +1,4 @@
+const userModel = require('../models/userModel')
 const jwt = require("jsonwebtoken");
 
 module.exports = {
@@ -19,13 +20,14 @@ module.exports = {
             return res.status(500).send({ status: false, message: error.message });
         }
     },
-    authorization : (req, res, next) => {
+    authorization : async (req, res, next) => {
         try {
             let userId = req.params.userId
             if (!userId) {
                 return res.status(400).send({ status: false, msg: "plz enter userId" });
             }
-            if (req.decodedToken.userId != userId) {
+            let fetchUser = await userModel.findById(userId)
+            if (req.decodedToken.email != fetchUser.email) {
                 return res.status(403).send({ status: false, msg: "Unauthorized person" });
             }
             next()
